@@ -16,5 +16,3 @@ class Student(Person):
             self.roll = roll
             self.__marks = 0
             self.set_marks(marks)
-
-        #setter method
