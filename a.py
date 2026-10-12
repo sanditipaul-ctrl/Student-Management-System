@@ -1,18 +1,26 @@
 class Person:
-    def __init__(self,name,age):
+    def __init__(self, name, age):
         self.name = name
         self.age = age
 
     def show_info(self):
-        print(f"Name: {self.name} \nAge : {self.age}") 
+        print(f"Name: {self.name} \nAge: {self.age}")
+
 
 class Student(Person):
-        School_name = "ABC School"
+    School_name = "ABC School"
 
-        def __init__(self, name, age,class_name,roll,marks = 0):
-            super().__init__(name, age)
+    def __init__(self, name, age, class_name, roll, marks=0):
+        super().__init__(name, age)
 
-            self.class_name = class_name
-            self.roll = roll
-            self.__marks = 0
-            self.set_marks(marks)
+        self.class_name = class_name
+        self.roll = roll
+        self.__marks = 0
+        self.set_marks(marks)
+
+    def set_marks(self, marks):
+        self.__marks = marks
+
+
+s1 = Student("ABC", 20, "10", 1, 85)
+s1.show_info()
